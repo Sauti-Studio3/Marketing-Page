@@ -1,0 +1,21 @@
+.primary{
+    font-family: 'Oswald', sans-serif;
+    color: @textcolor;
+};
+.btnad(@color, @bgcolor){
+    border-radius: 5px;
+    color: @color;
+    background: @bgcolor;
+}
+/*animation*/
+@keyframes Highlight {
+    0%{
+      transform: scale(1);
+    };
+    100%{
+      transform: scale(2);
+    };
+  };
+.highlight(@time){
+    animation: Highlight @time;
+};
