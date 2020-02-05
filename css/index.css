@@ -13,6 +13,12 @@
     transform: scale(2);
   }
 }
+.divide {
+  height: 20vh;
+  background-color: #708090;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -141,9 +147,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  width: 100%;
+}
 header .navbar {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
@@ -194,12 +202,26 @@ header .navbar nav a:hover {
     padding-left: 0rem;
   }
 }
+header {
+  width: 100%;
+}
 header .background {
   background-image: url(https://images.unsplash.com/photo-1523396140703-e5bdad4e5dea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
-  background-size: 100%;
   height: 90vh;
 }
+@media (max-width: 500px) {
+  header .background {
+    background-image: none;
+    background-color: #FFFAF0;
+    height: 20vh;
+  }
+}
+header .media {
+  display: flex;
+}
 header .main {
+  width: 100%;
+  border-top: 2px solid black;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -211,6 +233,13 @@ header .main h2 {
   color: #FFFAF0;
   font-family: 'Roboto Slab', serif;
   margin-bottom: 2.5rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  header .main h2 {
+    font-size: 1rem;
+    color: #708090;
+  }
 }
 header .main .btn {
   border-radius: 5px;
@@ -219,13 +248,127 @@ header .main .btn {
   font-size: 1.5rem;
   border: 1px black solid;
 }
+header .main .btn:hover {
+  border-radius: 5px;
+  color: black;
+  background: #9aa6b3fb;
+}
 header .main .btn a {
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
   color: #FFFAF0;
-  padding: 0.3rem;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  header .main .btn {
+    border-radius: 5px;
+    color: black;
+    background: grey;
+  }
+}
+@media (max-width: 500px) {
+  header .main {
+    height: 20vh;
+  }
 }
 .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 20vh;
   background-color: #708090;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  font-family: 'Oswald', sans-serif;
+  color: #FFFAF0;
+}
+@media (max-width: 500px) {
+  .divider {
+    height: 60vh;
+    margin-top: 60vh;
+  }
+}
+.centertext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.centertext h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.centertext p {
+  text-align: center;
+  margin-top: 2vh;
+}
+.botdiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.botdiv .list {
+  width: 50%;
+}
+.botdiv .list ul {
+  list-style-position: inside;
+  list-style-type: circle;
+  margin-left: 4%;
+}
+.botdiv .list li {
+  font-size: 2.2rem;
+  line-height: 10vh;
+  font-family: 'Roboto Slab', serif;
+}
+@media (max-width: 500px) {
+  .botdiv .list li {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .botdiv .list {
+    width: 90%;
+    margin: 0rem 5%;
+  }
+}
+.botdiv .img {
+  width: 50%;
+  padding: 2rem;
+}
+.botdiv .img .hand {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+@media (max-width: 500px) {
+  .botdiv .img .hand {
+    width: 90%;
+    margin: 0% 5%;
+    margin-bottom: 3%;
+  }
+}
+@media (max-width: 500px) {
+  .botdiv .img {
+    width: 100%;
+    padding: 0rem;
+  }
+}
+@media (max-width: 500px) {
+  .botdiv {
+    flex-direction: column;
+  }
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  background-color: #708090;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.bottom h1 {
+  font-family: 'Oswald', sans-serif;
+  color: #FFFAF0;
+  font-size: 2rem;
 }

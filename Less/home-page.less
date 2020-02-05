@@ -1,10 +1,21 @@
 header{
+    width: 100%;
     .background{
         background-image: url(https://images.unsplash.com/photo-1523396140703-e5bdad4e5dea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
-        background-size: 100%;
         height: 90vh;
+        
+        @media @phone{
+            background-image: none;
+            background-color: @floralwhite;
+            height: 20vh;
+        }
+    }
+    .media{
+        display: flex;
     }
     .main{
+        width: 100%;
+        border-top: 2px solid black;
         height: 90vh;
         display: flex;
         justify-content: center;
@@ -16,22 +27,120 @@ header{
             color: @textcolor;
             font-family: @robot;
             margin-bottom: 2.5rem;
+            text-align: center;
+
+            @media @phone{
+                font-size: 1rem;
+                color: @navcolor;
+            }
         }
 
         .btn{
             .btnad(black, @navcolor);
             font-size: 1.5rem;
             border: 1px black solid;
+            &:hover{
+                .btnad(black, #9aa6b3fb);
+            }
             a{
                 text-decoration: none;
                 .primary();
-                padding: 0.3rem;
+                padding: 1rem;
             }
+            @media @phone{
+                .btnad(black, grey);
+            }
+        }
+
+        @media @phone{
+            height: 20vh;
         }
     }
 }
 .divider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divide();
+    .primary();
 
-    height: 20vh;
-    background-color: @navcolor;
+    @media @phone{
+        height: 60vh;
+        margin-top: 60vh;
+    }
+}
+.centertext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    p{
+        text-align: center;
+        margin-top: 2vh;
+    }
+}
+.botdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .list{
+        width: 50%;
+        
+        ul{
+            list-style-position: inside;
+            list-style-type: circle;
+            margin-left: 4%;
+        }
+        li{
+            font-size: 2.2rem;
+            line-height: 10vh;
+            font-family: @robot;
+            @media @phone{
+                font-size: 1rem;
+            }
+        }
+        
+        @media @phone{
+            width: 90%;
+            margin: 0rem 5%
+        }
+    }
+    .img{
+        width: 50%;
+        padding: 2rem;
+        .hand{
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid black;
+
+            @media @phone{
+                width: 90%;
+                margin: 0% 5%;
+                margin-bottom: 3%;
+            }
+        }
+        @media @phone{
+            width: 100%;
+            padding: 0rem;
+        }
+    }
+    @media @phone{
+        flex-direction: column;
+    }
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .divide();
+
+    h1{
+        .primary();
+        font-size: 2rem;
+    }
 }
