@@ -6,6 +6,7 @@ header{
         align-items: center;
         padding: 2rem;
         background-color: @navcolor;
+        border-bottom: 2px solid black;
 
         .title{
             color: @textcolor;
@@ -32,12 +33,12 @@ header{
                 font-size: 1.3rem;
                 text-decoration: none;
                 letter-spacing: 0.2rem;
+                .primary();
                 &:hover{
                     color: black;
-                    .highlight(1.2s);
+                    animation: Highlight 1.5s;
                     text-decoration: line-through;
-                }
-                .primary();
+                    }
             };
             @media @phone{
                 padding: 0rem;

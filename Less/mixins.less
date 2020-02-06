@@ -13,7 +13,7 @@
       transform: scale(1);
     };
     100%{
-      transform: scale(2);
+      transform: scale(1.2);
     };
   };
 .highlight(@time){
@@ -24,4 +24,10 @@
   background-color: @navcolor;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+}
+.bg(@url){
+  background-image: url(@url);
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
