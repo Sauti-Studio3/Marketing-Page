@@ -19,6 +19,10 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
+.mediawid {
+  width: 90%;
+  margin: 0% 5%;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -196,6 +200,11 @@ header .navbar nav a:hover {
     padding: 1rem;
   }
 }
+@media (max-width: 800px) {
+  header .navbar nav a {
+    padding: 1rem;
+  }
+}
 @media (max-width: 500px) {
   header .navbar nav {
     padding: 0rem;
@@ -210,6 +219,11 @@ header .navbar nav a:hover {
 @media (max-width: 500px) {
   header .navbar {
     padding-right: 0;
+  }
+}
+@media (max-width: 800px) {
+  header .navbar {
+    justify-content: space-evenly;
   }
 }
 header {
@@ -341,7 +355,13 @@ header .main .btn a {
 @media (max-width: 500px) {
   .botdiv .list {
     width: 90%;
-    margin: 0rem 5%;
+    margin: 0% 5%;
+  }
+}
+@media (max-width: 800px) {
+  .botdiv .list {
+    width: 90%;
+    margin: 0% 5%;
   }
 }
 .botdiv .img {
@@ -360,13 +380,31 @@ header .main .btn a {
     margin-bottom: 3%;
   }
 }
+@media (max-width: 800px) {
+  .botdiv .img .hand {
+    width: 90%;
+    margin: 0% 5%;
+    margin-bottom: 3%;
+  }
+}
 @media (max-width: 500px) {
   .botdiv .img {
     width: 100%;
     padding: 0rem;
   }
 }
+@media (max-width: 800px) {
+  .botdiv .img {
+    width: 100%;
+    padding: 0rem;
+  }
+}
 @media (max-width: 500px) {
+  .botdiv {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
   .botdiv {
     flex-direction: column;
   }

@@ -109,8 +109,10 @@ header{
         }
         
         @media @phone{
-            width: 90%;
-            margin: 0rem 5%
+            .mediawid();
+        }
+        @media @tablet{
+            .mediawid();
         }
     }
     .img{
@@ -122,8 +124,11 @@ header{
             border: 2px solid black;
 
             @media @phone{
-                width: 90%;
-                margin: 0% 5%;
+                .mediawid();
+                margin-bottom: 3%;
+            }
+            @media @tablet{
+                .mediawid();
                 margin-bottom: 3%;
             }
         }
@@ -131,8 +136,15 @@ header{
             width: 100%;
             padding: 0rem;
         }
+        @media @tablet{
+            width: 100%;
+            padding: 0rem;
+        }
     }
     @media @phone{
+        flex-direction: column;
+    }
+    @media @tablet{
         flex-direction: column;
     }
 }
