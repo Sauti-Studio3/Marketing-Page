@@ -23,7 +23,6 @@ header{
 
             @media @phone{
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 margin-top: 1.5rem;
             }
@@ -39,6 +38,9 @@ header{
                     animation: Highlight 1.5s;
                     text-decoration: line-through;
                     }
+                @media @phone{
+                    padding: 1rem;
+                }
             };
             @media @phone{
                 padding: 0rem;
@@ -48,6 +50,10 @@ header{
         @media @phone{
             flex-direction: column;
             padding-left: 0rem;
+
         };
-};
+        @media @phone{
+            padding-right: 0;
+        }
+    };
 };
